@@ -12,9 +12,12 @@ class LoginScreen extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final userName = useTextEditingController();
-    final password = useTextEditingController();
-    final serverAddress = useTextEditingController();
+    final userName = useTextEditingController(text: "public");
+    final password = useTextEditingController(text: "public");
+     final serverAddress = useTextEditingController(text: "https://tv.mowetent.com");
+    // final serverAddress = ;
+    // final userName = "";
+    // final password = "";
     return Scaffold(
       appBar: AppBar(),
       body: Center(
@@ -33,37 +36,37 @@ class LoginScreen extends HookConsumerWidget {
                 const SizedBox(
                   height: 20,
                 ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 10.0),
-                  child: TextField(
-                    controller: serverAddress,
-                    decoration: InputDecoration(
-                        border: const OutlineInputBorder(),
-                        labelText: AppLocalizations.of(context)!.serverAddress,
-                        hintText: 'http://'),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 10.0),
-                  child: TextField(
-                    controller: userName,
-                    decoration: InputDecoration(
-                      border: const OutlineInputBorder(),
-                      labelText: AppLocalizations.of(context)!.username,
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 10.0),
-                  child: TextField(
-                    obscureText: true,
-                    controller: password,
-                    decoration: InputDecoration(
-                      border: const OutlineInputBorder(),
-                      labelText: AppLocalizations.of(context)!.password,
-                    ),
-                  ),
-                ),
+                // Padding(
+                //   padding: const EdgeInsets.symmetric(vertical: 10.0),
+                //   child: TextField(
+                //     controller: serverAddress,
+                //     decoration: InputDecoration(
+                //         border: const OutlineInputBorder(),
+                //         labelText: AppLocalizations.of(context)!.serverAddress,
+                //         hintText: 'http://'),
+                //   ),
+                // ),
+                // Padding(
+                //   padding: const EdgeInsets.symmetric(vertical: 10.0),
+                //   child: TextField(
+                //     controller: userName,
+                //     decoration: InputDecoration(
+                //       border: const OutlineInputBorder(),
+                //       labelText: AppLocalizations.of(context)!.username,
+                //     ),
+                //   ),
+                // ),
+                // Padding(
+                //   padding: const EdgeInsets.symmetric(vertical: 10.0),
+                //   child: TextField(
+                //     obscureText: true,
+                //     controller: password,
+                //     decoration: InputDecoration(
+                //       border: const OutlineInputBorder(),
+                //       labelText: AppLocalizations.of(context)!.password,
+                //     ),
+                //   ),
+                // ),
                 Padding(
                   padding: const EdgeInsets.symmetric(vertical: 10.0),
                   child: SizedBox(

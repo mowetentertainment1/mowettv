@@ -32,7 +32,7 @@ class MyApp extends ConsumerWidget {
       routerDelegate: appRouter.routerDelegate,
       routeInformationProvider: appRouter.routeInformationProvider,
       debugShowCheckedModeBanner: false,
-      title: "Jellyflix",
+      title: "MoWetTV",
       theme: ThemeData(
         pageTransitionsTheme: const PageTransitionsTheme(
           builders: {
@@ -41,7 +41,7 @@ class MyApp extends ConsumerWidget {
           },
         ),
         colorScheme: ColorScheme.fromSeed(
-            seedColor: Colors.deepPurple, brightness: Brightness.dark),
+            seedColor: Colors.orange, brightness: Brightness.dark),
         useMaterial3: true,
       ),
     );
