@@ -4,7 +4,7 @@
         <uses-feature android:name="android.hardware.touchscreen"
         android:required="false" />
     <application
-        android:label="Jellyflix"
+        android:label="MoTV"
         android:name="${applicationName}"
         android:banner="@drawable/banner"
         android:icon="@mipmap/launcher_icon">
