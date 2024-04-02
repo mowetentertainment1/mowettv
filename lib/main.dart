@@ -2,11 +2,27 @@ import 'package:flutter/services.dart';
 import 'package:jellyflix/providers/router_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:matomo_tracker/matomo_tracker.dart';
 import 'package:media_kit/media_kit.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-void main() {
+
+// See the docker folder for instructions on how to get a
+// test Matomo instance running
+const _matomoEndpoint = 'https://analytics.smithandtech.com/matomo.php';
+const _sideId = 3;
+const _testUserId = 'mowetthedon';
+
+
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await MatomoTracker.instance.initialize(
+    siteId: _sideId,
+    url: _matomoEndpoint,
+    verbosityLevel: Level.all,
+    // dispatchSettings: dispatchSettingsEndToEndTest,
+  );
+  MatomoTracker.instance.setVisitorUserId(_testUserId);
   // Necessary initialization for package:media_kit.
   MediaKit.ensureInitialized();
   runApp(ProviderScope(
@@ -32,7 +48,7 @@ class MyApp extends ConsumerWidget {
       routerDelegate: appRouter.routerDelegate,
       routeInformationProvider: appRouter.routeInformationProvider,
       debugShowCheckedModeBanner: false,
-      title: "MoWetTV",
+      title: "MoTV",
       theme: ThemeData(
         pageTransitionsTheme: const PageTransitionsTheme(
           builders: {

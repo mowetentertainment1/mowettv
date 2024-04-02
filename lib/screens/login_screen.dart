@@ -5,7 +5,6 @@ import 'package:jellyflix/providers/auth_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class LoginScreen extends HookConsumerWidget {
@@ -16,9 +15,7 @@ class LoginScreen extends HookConsumerWidget {
     final userName = useTextEditingController(text: "public");
     final password = useTextEditingController(text: "public");
      final serverAddress = useTextEditingController(text: "https://tv.mowetent.com");
-    // final serverAddress = ;
-    // final userName = "";
-    // final password = "";
+
     return Scaffold(
       appBar: AppBar(),
       body: Center(
@@ -29,10 +26,10 @@ class LoginScreen extends HookConsumerWidget {
             padding: const EdgeInsets.all(20.0),
             child: Column(
               children: [
-                CachedNetworkImage(
-                  imageUrl: "https://cloud.smithandtech.com/index.php/s/bs6qBSKCjsMJcme/download/30776838.png",
-                  placeholder: (context, url) => CircularProgressIndicator(),
-                  errorWidget: (context, url, error) => Icon(Icons.error),
+                const Icon(
+                  Icons.live_tv_outlined,
+                  color: Colors.white,
+                  size: 130.0,
                 ),
                 Text(AppLocalizations.of(context)!.appName,
                     style: Theme.of(context).textTheme.displaySmall),
@@ -42,37 +39,6 @@ class LoginScreen extends HookConsumerWidget {
                 const SizedBox(
                   height: 20,
                 ),
-                // Padding(
-                //   padding: const EdgeInsets.symmetric(vertical: 10.0),
-                //   child: TextField(
-                //     controller: serverAddress,
-                //     decoration: InputDecoration(
-                //         border: const OutlineInputBorder(),
-                //         labelText: AppLocalizations.of(context)!.serverAddress,
-                //         hintText: 'http://'),
-                //   ),
-                // ),
-                // Padding(
-                //   padding: const EdgeInsets.symmetric(vertical: 10.0),
-                //   child: TextField(
-                //     controller: userName,
-                //     decoration: InputDecoration(
-                //       border: const OutlineInputBorder(),
-                //       labelText: AppLocalizations.of(context)!.username,
-                //     ),
-                //   ),
-                // ),
-                // Padding(
-                //   padding: const EdgeInsets.symmetric(vertical: 10.0),
-                //   child: TextField(
-                //     obscureText: true,
-                //     controller: password,
-                //     decoration: InputDecoration(
-                //       border: const OutlineInputBorder(),
-                //       labelText: AppLocalizations.of(context)!.password,
-                //     ),
-                //   ),
-                // ),
                 Padding(
                   padding: const EdgeInsets.symmetric(vertical: 10.0),
                   child: SizedBox(

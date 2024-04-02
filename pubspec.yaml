@@ -4,7 +4,7 @@ description: "Another Jellyfin client for Android, iOS, Windows, macOS, Linux an
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none' 
 
-version: 00.00.00+0
+version: 1.0.0+6
 
 environment:
   sdk: '>=3.2.2 <4.0.0'
@@ -43,6 +43,7 @@ dependencies:
   go_router: ^13.0.0
   skeletonizer: ^0.8.0
   cached_network_image: ^3.3.1
+  matomo_tracker: ^4.1.1
   flutter_blurhash: ^0.8.2
   flutter_downloader: ^1.11.6
   dio: ^5.4.0

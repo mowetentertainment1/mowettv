@@ -92,7 +92,7 @@
     "addProfile": "Add Profile",
     "appSubtitle": "Independently Owned & Operated",
     "serverAddress": "Server Address",
-    "login": "Start",
+    "login": "Watch",
     "username": "Username",
     "password": "Password",
     "webDemoNote": "This is a demo version of Jellyflix. To use it, you can use the following credentials: \n\nServer Address: https://demo.jellyfin.org/stable \nUser Name: demo \nand empty password \n\n",
@@ -107,5 +107,5 @@
     "markAsUnplayed": "Mark as unplayed",
     "couldNotOpenTrailer": "Could not open trailer",
     "watchTrailer": "Watch Trailer",
-    "appName": "MoWetTV"
+    "appName": "MoTV"
 }
